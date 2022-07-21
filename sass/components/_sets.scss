@@ -1,0 +1,24 @@
+.benefits-set {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--benefits-gap));
+}
+
+.benefits-set-item {
+    flex-basis: calc(100% / var(--benefits-items) - var(--benefits-gap));
+    margin-left: var(--benefits-gap);
+}
+
+.team-set {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--team-gap);
+}
+
+.team-set-item {
+    flex-basis: calc((100% / var(--team-gap) * 3) / var(--team-items));
+    background-color: var(--main-bg-cl);
+}

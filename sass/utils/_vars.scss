@@ -1,0 +1,32 @@
+:root {
+    /* fonts */
+    --main-font: "Roboto";
+    --secondary-font: "Raleway";
+    /* text colors */
+    --accent-txt-cl: #2196F3;
+    --secondary-accent-txt-cl: #FFFFFF;
+    --main-txt-cl: #212121;
+    --secondary-txt-cl: #757575;
+    /* bg-colors */
+    --main-bg-cl: #FFFFFF;
+    --secondary-bg-cl: #2F303A;
+    --accent-bg-cl: #2196F3;
+    --secondary-accent-bg-cl: #F5F4FA;
+    /* logo-icons */
+    --logo-icons-main-cl: #AFB1B8;
+    --logo-icons-accent-cl: #2196F3;
+    --logo-icons-secondary-accent-cl: #FFFFFF;
+
+    /* animation */
+    --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* others */
+    --portfolio-items: 3;
+    --portfolio-gap: 30px;
+    --team-items: 4;
+    --team-gap: 30px;
+    --benefits-items: 4;
+    --benefits-gap: 30px;
+    --clients-gap: 30px;
+    --clients-items: 6;
+}
