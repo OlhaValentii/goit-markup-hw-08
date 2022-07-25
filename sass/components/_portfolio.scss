@@ -1,5 +1,5 @@
 .portfolio {
-    background-color: var(--main-bg-cl);
+    background-color: $main-bg-cl;
 }
 
 .portfolio-container {
@@ -9,9 +9,18 @@
 
 .portfolio-filter-list {
     display: flex;
-    justify-content: center;
     flex-direction: row;
     margin-bottom: 50px;
+
+    @media screen and (min-width: 480px) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+    }
+
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+    }
 }
 
 .portfolio-filter-list-item {
@@ -19,6 +28,16 @@
 
     &:last-child {
         margin-right: 0;
+    }
+
+        &:nth-child(-n + 3) {
+            margin-bottom: 15px;
+        }
+
+    @media screen and (min-width: 768px) {
+        &:nth-child(-n + 3) {
+                margin-bottom: 0;
+            }
     }
 }
 
@@ -28,44 +47,64 @@
     line-height: 26px;
     letter-spacing: 0.03em;
     text-align: center;
-    color: var(--main-txt-cl);
-    background-color: var(--secondary-accent-bg-cl);
+    color: $main-txt-cl;
+    background-color: $secondary-accent-bg-cl;
     border: none;
     border-radius: 4px;
     padding: 6px 22px;
-    transition: color var(--anim), background-color var(--anim), box-shadow var(--anim);
+    transition: color $anim, background-color $anim, box-shadow $anim;
 
     &:hover,
     &:focus {
-        color: var(--secondary-accent-txt-cl);
-        background-color: var(--accent-bg-cl);
+        color: $secondary-accent-txt-cl;
+        background-color: $accent-bg-cl;
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-        transform: var(--anim);
+        transform: $anim;
     }
 }
 
 .card-set {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--portfolio-gap);
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 768px) {  
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: $portfolio-gap;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: $portfolio-gap;
+    }
 }
 
 .card-set-item {
-    flex-basis: calc((100% - var(--portfolio-gap) * 2) / var(--portfolio-items));
+    @media screen and (min-width: 480px) {}
+    
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - $portfolio-gap * 1) / $portfolio-tablet-items);
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - $portfolio-gap * 2) / $portfolio-desktop-items);
+    }
 }
 
 .portfolio__item {
     display: flex;
     flex-direction: column;
     border: 1px solid #EEEEEE;
-    transition: box-shadow var(--anim);
+    transition: box-shadow $anim;
 
     &:hover,
     &:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-        transform: var(--anim);
+        transform: $anim;
     }
 }
 
@@ -90,7 +129,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    font-family: var(--main-font);
+    font-family: $main-font;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.56;
@@ -98,7 +137,7 @@
     color: #FFFFFF;
     background: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
-    transition: transform var(--anim);
+    transition: transform $anim;
 }
 
 .portfolio-info {
@@ -110,7 +149,7 @@
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--main-txt-cl);
+    color: $main-txt-cl;
 }
 
 .portfolio-info__text {
@@ -118,5 +157,5 @@
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
-    color: var(--secondary-txt-cl);
+    color: $secondary-txt-cl;
 }

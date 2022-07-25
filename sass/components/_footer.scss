@@ -1,25 +1,65 @@
 .footer {
-    background-color: var(--secondary-bg-cl);
+    background-color: $secondary-bg-cl;
 }
 
 .footer-container {
-    display: flex;
-    flex-direction: row;
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.footer-group {
+    @media screen and (min-width: 768px)  {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-bottom: 60px;
+    }
 }
 
 .footer-contact {
-    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 70px;
+    }
+}
+
+.footer-contact__logo {
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: $accent-txt-cl;
+    text-decoration: none;
 }
 
 .footer-contact__logo-span {
-    color: var(--secondary-accent-txt-cl);
+    color: $secondary-accent-txt-cl;
 }
 
 .footer-contact__address {
     font-style: normal;
     margin-top: 20px;
+}
+
+.footer-contact__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+        width: 232px;
+    }
 }
 
 .footer-contact__item {
@@ -35,13 +75,13 @@
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--secondary-accent-txt-cl);
-    transition: color var(--anim);
+    color: $secondary-accent-txt-cl;
+    transition: color $anim;
 
     &:hover,
     &:focus {
-        color: var(--accent-txt-cl);
-        transform: var(--anim);
+        color: $accent-txt-cl;
+        transform: $anim;
     }
 }
 
@@ -51,20 +91,32 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    transition: color var(--anim);
+    transition: color $anim;
 
     &:hover,
     &:focus {
-        color: var(--accent-txt-cl);
-        transform: var(--anim);
+        color: $accent-txt-cl;
+        transform: $anim;
+    }
+}
+
+.footer-social-media {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
     }
 }
 
 .footer-social-media {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-right: 93px;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+    }
 }
 
 .footer-title {
@@ -72,7 +124,7 @@
     font-size: 14px;
     line-height: 1.14x;
     text-transform: uppercase;
-    color: var(--secondary-accent-txt-cl);
+    color: $secondary-accent-txt-cl;
     margin-bottom: 20px;
 }
 
@@ -96,14 +148,14 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    color: var(--logo-icons-secondary-accent-cl);
+    color: $logo-icons-secondary-accent-cl;
     background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color var(--anim);
+    transition: background-color $anim;
 
     &:hover,
     &:focus {
-        background-color: var(--logo-icons-accent-cl);
-        transform: var(--anim);
+        background-color: $logo-icons-accent-cl;
+        transform: $anim;
     }
 }
 
@@ -113,28 +165,43 @@
 }
 
 .footer-register {
-    position: relative;
-    width: 570px;
-    height: 86px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+        align-items: flex-start;
+    }
 }
 
 .footer-register__form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+    }
 }
 
 .footer-register__input {
     box-sizing: border-box;
-    width: 358px;
+    width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    background-color: var(--secondary-bg-cl);
-    color: var(--secondary-txt-cl);
+    background-color: $secondary-bg-cl;
+    color: $secondary-txt-cl;
     padding-left: 16px;
     margin-right: 12px;
     outline: transparent;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+        margin-bottom: 0;
+    }
 }
 
 .footer-register__btn {
@@ -144,7 +211,7 @@
     padding: 0 29px;
     width: 200px;
     height: 50px;
-    background: var(--accent-bg-cl);
+    background: $accent-bg-cl;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 4px;
@@ -152,5 +219,5 @@
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    color: var(--secondary-accent-txt-cl);
+    color: $secondary-accent-txt-cl;
 }

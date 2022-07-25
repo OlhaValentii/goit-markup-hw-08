@@ -1,5 +1,5 @@
 .page-header {
-    background-color: var(--main-bg-cl)
+    background-color: $main-bg-cl;
 }
 
 .header-container {
@@ -19,37 +19,55 @@
 }
 
 .header-nav__logo {
-    margin-right: 93px;
+    @media screen and (min-width: 768px) {
+        margin-right: 87px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+    }
 }
 
 .logo {
-    font-family: var(--secondary-font);
+    font-family: $secondary-font;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
-    color: var(--accent-txt-cl);
+    color: $accent-txt-cl;
     text-decoration: none;
 }
 
 .header-nav__logo-span {
-    color: var(--main-txt-cl);
+    color: $main-txt-cl;
     text-decoration: none;
 }
 
 .header-nav__list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+            width: 238px;
+            justify-content: space-between;
+        }
 }
 
 .header-nav__item {
-    position: relative;
-    margin-right: 50px;
+    @media screen and (min-width: 1200px) {
+        position: relative;
+        margin-right: 50px;
 
-    &:last-child {
-        margin-right: 0;
+        &:last-child {
+            margin-right: 0;
+        }
     }
+    
 }
 
 .header-nav__item--active::after {
@@ -65,53 +83,56 @@
 }
 
 .header-nav__link {
-    width: 122px;
-    height: 16px;
-    left: 1263px;
-    top: 32px;
     font-weight: 500;
+    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--main-txt-cl);
-    transition: color var(--anim);
+    color: $main-txt-cl;
+    transition: color $anim;
 
     &:hover,
     &:focus {
-        color: var(--accent-txt-cl);
-        transform: var(--anim);
+        color: $accent-txt-cl;
+        transform: $anim;
     }
 }
 
 .header-contact-list {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+    }
 }
 
 .header-contact-link {
-    width: 122px;
-    height: 16px;
-    left: 1263px;
-    top: 32px;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--secondary-txt-cl);
-    transition: color var(--anim);
+    color: $secondary-txt-cl;
+    transition: color $anim;
 
     &:hover,
     &:focus {
-        color: var(--accent-txt-cl);
-        transform: var(--anim);
+        color: $accent-txt-cl;
+        transform: $anim;
     }
 }
 
 .header-contact-list-item:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (min-width: 1200px) {
+        margin-right: 50px;
+    }
 }
 
 .header-icon {
-    margin-right: 10px;
+    margin-right: 8px;
     fill: currentColor;
 
     &:hover,

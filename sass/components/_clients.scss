@@ -12,27 +12,57 @@
 .clients__list {
     display: flex;
     justify-content: center;
-    flex-direction: row;
     cursor: pointer;
 }
 
-.clients__item {
-    margin-right: 30px;
-    padding: 16px 32px;
-    color: var(--logo-icons-main-cl);
-    border: 1px solid var(--logo-icons-main-cl);
-    border-radius: 4px;
-    transition: color var(--anim), border var(--anim);
-
-    &:last-child {
-        margin-right: 0;
+.clients-set {
+    @media screen and (min-width: 480px) and (max-width: 766px) {
+        margin: 0;
+        flex-wrap: wrap;
+        gap: $clients-gap;
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin: 0;
+        flex-wrap: wrap;
+        gap: $clients-gap;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+    }
+}
+
+.clients-set-item {
+    @media screen and (min-width: 480px) and (max-width: 766px) {
+        flex-basis: calc((100% - $clients-gap * 2) / $clients-mobil-items);
+    }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-basis: calc((100% - $clients-gap * 3) / $clients-tablet-items);
+    }
+}
+
+.clients__item {
+    padding: 16px 32px;
+    color: $logo-icons-main-cl;
+    border: 1px solid $logo-icons-main-cl;
+    border-radius: 4px;
+    transition: color $anim, border $anim;
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    } 
 
     &:hover,
     &:focus {
-        color: var(--logo-icons-accent-cl);
-        border: 1px solid var(--logo-icons-accent-cl);
-        transform: var(--anim);
+        color: $logo-icons-accent-cl;
+        border: 1px solid $logo-icons-accent-cl;
+        transform: $anim;
     }
 }
 
