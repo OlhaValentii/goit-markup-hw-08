@@ -16,7 +16,7 @@
 }
 
 .clients-set {
-    @media screen and (min-width: 480px) and (max-width: 766px) {
+    @media screen and (min-width: 320px) and (max-width: 766px) {
         margin: 0;
         flex-wrap: wrap;
         gap: $clients-gap;
@@ -34,7 +34,7 @@
 }
 
 .clients-set-item {
-    @media screen and (min-width: 480px) and (max-width: 766px) {
+    @media screen and (min-width: 320px) and (max-width: 766px) {
         flex-basis: calc((100% - $clients-gap * 2) / $clients-mobil-items);
     }
 
